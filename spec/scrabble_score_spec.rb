@@ -11,7 +11,19 @@ require('rspec')
     expect("A".scrabble()).==(1)
   end
 
-    # it("returns a scrabble score for a letter") do
-    #   expect("D,G".scrabble()).==(2)
-    # end
+    it("returns a scrabble score for a letter") do
+      expect("YX".scrabble()).==(10)
+    end
+
+    it("returns a scrabble score for a downcase letter")do
+      expect("ag".scrabble()).==(2)
+    end
+
+    it("returns a scrabble score for both a downcase and upcased letter")do
+      expect("BzFn".scrabble()).==(9)
+    end
+
+    it("returns the sum of a scrabble score of a word")do
+      expect("BlaaBloe".scrabble()).==(11)
+    end
 end
